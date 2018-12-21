@@ -1,20 +1,23 @@
-$(document).ready(function(){
+var wow = new WOW(
+    {
+        boxClass:     'wow',      // animated element css class (default is wow)
+        animateClass: 'animated', // animation css class (default is animated)
+        offset:       0,          // distance to the element when triggering the animation (default is 0)
+        mobile:       true,       // trigger animations on mobile devices (default is true)
+        live:         true,       // act on asynchronously loaded content (default is true)
+        callback:     function(box) {
+            // the callback is fired every time an animation is started
+            // the argument that is passed in is the DOM node being animated
+        },
+        scrollContainer: null,    // optional scroll container selector, otherwise use window,
+        resetAnimation: true,     // reset animation on end (default is true)
+    }
+);
+wow.init();
 
-   var counter = 0;
-   var a= 0;
-   var b= setInterval(function(){
-
-       $(".loader .number .counted").html(a);
-       $(".loader").css("width", a +"%");
-
-       counter++;
-       a++;
-
-       if(counter == 101){
-            clearInterval(b);
-            $(".loader").css("display", "none");
-       }
-
-   }, 50);
-
+$(window).on('load', function(){
+    setTimeout(function(){
+        $('#loader').addClass('loaded');
+    }, 1000);
 });
+

@@ -1,42 +1,85 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
-
-/*#loading{*/
-    /*position: fixed;*/
-    /*width: 100%;*/
-    /*height: 100vh;*/
-    /*background: #fff url('img/lg.cutie-fox-spinner.gif')*/
-    /*no-repeat center;*/
-    /*z-index: 99999;*/
-/*}*/
-
-.loader{
-    width: 100%;
+aside#loader {
+    background-color: #000;
+    background-image: url("img/lg.cutie-fox-spinner.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
     height: 100vh;
-    /*background: #4a4a4a;*/
-    background: #fff url('img/lg.cutie-fox-spinner.gif')
+    width: 100vw;
+    z-index: 9999;
+    overflow: hidden;
+}
+.loaded {
+    -webkit-animation: load-out 2s forwards;
+    animation: load-out 3s forwards;
+    overflow: visible;
+}
+@-moz-keyframes load-out {
+    from {
+        opacity: 1;
+        z-index: 9999;
+    }
+    to {
+        opacity: 0;
+        z-index: -9999;
+    }
+}
+@-webkit-keyframes load-out {
+    from {
+        opacity: 1;
+        z-index: 9999;
+    }
+    to {
+        opacity: 0;
+        z-index: -9999;
+    }
+}
+@-o-keyframes load-out {
+    from {
+        opacity: 1;
+        z-index: 9999;
+    }
+    to {
+        opacity: 0;
+        z-index: -9999;
+    }
+}
+@keyframes load-out {
+    from {
+        opacity: 1;
+        z-index: 9999;
+    }
+    to {
+        opacity: 0;
+        z-index: -9999;
+    }
 }
 
-/*.loader .number h1{*/
-    /*font-size: 280px;*/
-    /*color: #ffffff;*/
-    /*font-weight:bold;*/
-    /*top: 30%;*/
-    /*left: 50%;*/
-    /*position: fixed;*/
-    /*transform: translate(-50%, -50%);*/
-/*}*/
+.heading {
+    position: absolute;
+    margin-left:20px;
+    color: #fff;
+    font-size: 550%;
+    top: 20%;
+    width: 50%;
+    text-transofrm: uppercase;
+    letter-spacing: 8px;
+    text-shadow: 0 0 10px #000;
+}
 
 body, html{
     height: 100%;
     margin: 0;
-    font-family: 'Ubuntu', sans-seriff;
+    /*font-family: 'Ubuntu', sans-seriff;*/
     line-height: 180%;
     color: #666;
-    text-align: center;
+    display: unset;
+    /*text-align: center;*/
 }
 
 .px1{
-    background: url(img/animal-branch-cat-35888.jpg);
+    background: url("img/animal-branch-cat-35888.jpg");
     min-height: 100%;
 }
 
@@ -62,38 +105,6 @@ body, html{
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment:fixed;
-}
-
-.heading{
-    position: absolute;
-    color: #fff;
-    font-size: 550%;
-    top: 20%;
-    width: 50%;
-    text-transofrm: uppercase;
-    letter-spacing: 8px;
-    text-shadow: 0 0 10px #000;
-}
-
-.heading-sm{
-    position: absolute;
-    top:45%;
-    width: 100%;
-    color: #fff;
-    font-size: 250%;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    text-shadow: 0 0 10px #000;
-}
-.heading-sm1{
-    position: absolute;
-    top:55%;
-    width: 50%;
-    color: #fff;
-    font-size: 250%;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    text-shadow: 0 0 10px #000;
 }
 
 .two-col{
@@ -129,15 +140,4 @@ section{
         text-align: center;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
 
