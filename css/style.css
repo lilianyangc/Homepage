@@ -1,0 +1,412 @@
+/*mobile first development*/
+
+*{
+    box-sizing: border-box;
+   /* box sizing is based on the box size with the padding*/
+    transition: all ease-in-out 250ms;
+}
+
+body{
+    margin: 0; /*important*/
+    font-family:sans-serif;
+    text-align:center;
+}
+
+/*setting the max width of the images*/
+img {
+    max-width: 100%; /*important*/
+    height: auto; /*important*/
+}
+
+.container{
+    width: 95%; /*stops the text from going to the end of the screen*/
+    max-width: 70em;
+    margin: 0 auto; /*important*/
+    position: relative;
+
+}
+
+
+
+/*if theres a floating image you need to clearfix*/
+.clearfix::after, section::after, footer::after {
+    content: '';
+    display: block;
+    clear:both;
+}
+
+/*column system
+----------------*/
+
+/*any class that starts with*/
+[class^=col-]{
+    width: 100%;
+    margin-top: 1em;
+}
+
+[class^=col-]:first-child{
+    margin-top: 0;
+}
+
+.col-1{
+    width: 33.3333334%;
+    float: left;
+}
+
+@media (min-width: 40rem){
+
+    [class^=col-]{
+        float:left;
+        padding: 0 .5em;
+        margin-top: 0;
+    }
+
+    [class^=col-]:first-child{
+        padding-left:0;
+    }
+
+    [class^=col-]:last-child{
+        padding-right:0;
+    }
+
+    .col-3 {
+        width: 50%
+    }
+
+    .col-1{
+        width: 16.666666%;
+
+    }
+
+}
+
+/* typography
+---------------*/
+h1 {
+    font-weight: 300;
+    font-size: 1.7rem;
+    margin-top: 0;
+}
+
+p {
+    margin-top: 0;
+    line-height: 1.5;
+}
+
+p:last-of-type{
+    margin-bottom: 0;
+}
+
+.title{
+    font-size: 2.5rem;
+    margin-bottom: 1.5em;
+    font-weight: 900;
+    margin-top: 1em;
+    text-align:left;
+    left: 1em;
+    position: relative;
+}
+
+.title-cta {
+    color: white;
+    margin: 0 0 .5em;
+}
+
+.title-cta button {
+
+}
+
+.unstyled-list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.title span {
+    font-weight: 300;
+    display: block;
+    font-size: .9em;
+}
+
+@media (min-width: 60rem ){
+    p{
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+
+    .title {
+        font-size: 3.7rem;
+    }
+}
+
+/*buttons*/
+.button {
+    display: inline-block;
+    font-size: 1.15rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-width: 2px; /*resizes the border*/
+    border-style: solid; /*pops the border*/
+    padding: .5em 1.75em; /*adds padding between the border and the content*/
+}
+
+.title-button{
+    position: absolute;
+    text-align: left;
+    margin-top: 10%;
+    left: 2em;
+
+}
+
+.button-small {
+    font-size: .7rem;
+    font-weight: 700;
+}
+
+.button-accent {
+    color: #404040; /*#00ff6c;*/
+    border-color: #404040; /*makes the border same color as the hover color*/
+}
+
+.button-accent:hover, .button-accent:focus{
+    background:#404040;
+    color: #fff;
+}
+
+/*cta button design and hover*/
+.button-dark {
+    color: #fff;
+    border-color: #fff; /*makes the border same color as the hover color*/
+}
+
+.button-dark:hover, .button-dark:focus{
+    background: #232323;
+    color: #404040;
+}
+
+@media (min-width: 60rem ){
+    .button {
+        font-size: 1.5rem;
+    }
+}
+
+
+/*Parallax
+---------------*/
+.parallax--bg, .parallax--box {
+transition: initial;
+}
+
+/*header
+---------------*/
+
+header{
+    position: absolute; /*makes the header on top of the background-image*/
+    left: 0; /*centers the header along with right: 0*/
+    right: 0;
+    margin: 1em;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block; /*places the list side by side*/
+    margin: 1em;
+}
+
+nav a {
+    font-weight: 900; /*adds thickness to the anchor titles*/
+    text-decoration: none; /*takes out the default underline decoration of the anchor*/
+    text-transform: uppercase;
+    font-size: .8rem;
+    padding: .5em; /*adding a padding to the anchor titles for bigger area of clicking/touch*/
+    /*background: pink; check the space alotted for clicking the anchors*/
+    color: #232323; /*#232323; */
+}
+
+nav a:hover, nav a:focus {
+    color: #DDD;
+}
+
+@media (min-width: 60rem ){
+    .logo {
+        float: left;
+    }
+
+    nav {
+        float: right;
+    }
+}
+
+/*home-hero
+-----------------*/
+.home-hero {
+    background-image: url(../img/white-bg.png);
+    background-size: cover;
+    background-position: center;
+    padding: 10em 0;
+    color: #232323;
+    background-attachment: fixed;
+    /*opacity: .75;*/
+}
+
+
+@media (min-width: 60rem){
+    .home-hero {
+        height: 100vh;
+        padding-top: 35vh;
+    }
+}
+
+/*home
+-----------------*/
+.home-about-textbox {
+    background-color: #232323;
+    padding: 4em;
+    width: 100vw;
+    margin-left: -2.5%;
+    outline: 2px solid #A9A9A9; /*it's like border but you can use offset*/
+    outline-offset: -2.5em; /*negative outline offset to move the outline inwards*/
+    color: #FFF;
+    position: relative; /*added to move the h1*/
+}
+
+.home-about-textbox h1{
+    color: #D3D3D3;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: .75em;
+    background: #232323;
+    padding: 0 .145em;
+}
+
+.home-about {
+    background-image: url("../img/box4test.gif");
+    background-repeat: no-repeat;
+    padding-bottom: 30em;
+}
+
+/*determined the style on the specified min-width*/
+@media (min-width: 25rem){
+    h1{
+        font-size: 2rem;
+    }
+
+    .home-about-textbox {
+        padding: 5.5em;
+    }
+
+    .home-about-textbox h1{
+        top: .6em;
+        padding: 0 .325em;
+
+    }
+}
+
+@media (min-width: 60rem){
+    h1{
+        font-size: 2.5rem;
+    }
+
+    .home-about {
+        background-image: url("../img/box4test.gif");
+        background-repeat: no-repeat;
+        padding-bottom: 40em;
+    }
+
+    .home-about-textbox {
+        width: 50%;
+        padding: 7em;
+        outline-offset: -3.75em;
+        margin-left: -2.5%;
+        top: -5em;
+        text-align: left;
+        box-shadow: 0 0 4em 0 rgba(0,0,0,.3);
+    }
+
+    .home-about-textbox h1{
+        top: .75em;
+        left: 6rem;
+        transform: translateX(0);
+    }
+
+}
+
+/*portfolio
+--------------*/
+
+.portfolio {
+    /*top-m = 3em, right and left= 0, bottom=0*/
+    margin:3em 0 0;
+}
+.port-item {
+    margin: 0;
+    position: relative; /*relative to the parent*/
+}
+
+/*to delete the single line after the image*/
+.port-item img{
+    display: block;
+}
+
+.port-desc{
+    position: absolute;
+    z-index: 100; /*sending the item to the back or to the front*/
+    bottom: 0em;
+    left: 0em;
+    right: 0em;
+    color: white;
+    background: rgba(0,0,0,.6);
+    padding-bottom: 1em;
+}
+
+.port-desc p {
+    margin: 1em;
+}
+
+@media (min-width: 37rem){
+    .port-item {
+        width: 50%;
+        float: left;
+    }
+}
+
+@media (min-width: 60rem){
+    .port-item{
+        width: 33.3333334%;
+        overflow: hidden; /*to hide port-item */
+    }
+
+    .port-desc {
+        transform: translateY(150%);
+        padding: 1em;
+    }
+
+    .port-item:hover .port-desc {
+        transform: translateY(0%);
+    }
+}
+
+/*CTA
+-----------------*/
+
+.cta{
+    background-color: #404040;
+    padding: 5em 0;
+}
+
+/*FOOTER
+-------------------*/
+
+footer {
+    background: #232323;
+    color: #fff;
+    text-align:left;
+    padding: 5em 0;
+}
+

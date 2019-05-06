@@ -2,131 +2,265 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
-    <script src="master.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lilian's Portfolio</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <style>
+        .fly-in-text {
+            list-style: none;
+            position: absolute;
+            transform: translateY(-50%);
+        }
+
+        .fly-in-text li{
+            display: inline-block; /*makes the li next to each other*/
+            margin-right: -0.25em;
+            opacity: 1;
+            transition: all 2.5s ease;
+        }
+
+        /*.fly-in-cat{
+            opacity: 1;
+            transition: all 2.5s ease;
+        }*/
+
+        /*.fly-in-text li:last-child{*/
+            /*margin-right: 0;*/
+        /*}*/
+
+        .fly-in-text hidden li {
+            opacity: 0;
+        }
+        /*.fly-in-cat.hidden { transform: translateX(400px) translateY(400px); }*/
+        .fly-in-text.hidden li:nth-child(1) { transform: translateX(-200px) translateY(-200px); }
+        .fly-in-text.hidden li:nth-child(2) { transform: translateX(20px) translateY(100px); }
+        .fly-in-text.hidden li:nth-child(3) { transform: translateX(-150px) translateY(-80px); }
+        .fly-in-text.hidden li:nth-child(4) { transform: translateX(10px) translateY(-200px); }
+        .fly-in-text.hidden li:nth-child(5) { transform: translateX(-300px) translateY(200px); }
+        .fly-in-text.hidden li:nth-child(6) { transform: translateX(20px) translateY(-20px); }
+        .fly-in-text.hidden li:nth-child(7) { transform: translateX(30px) translateY(200px); }
+        .fly-in-text.hidden li:nth-child(8) { transform: translateX(-200px) translateY(-200px); }
+        .fly-in-text.hidden li:nth-child(9) { transform: translateX(20px) translateY(100px); }
+        .fly-in-text.hidden li:nth-child(10) { transform: translateX(-150px) translateY(-80px); }
+        /*.fly-in-text.hidden li:nth-child(11) { transform: translateX(10px) translateY(-200px); }*/
+        /*.fly-in-text.hidden li:nth-child(12) { transform: translateX(-300px) translateY(200px); }*/
+        /*.fly-in-text.hidden li:nth-child(13) { transform: translateX(20px) translateY(-20px); }*/
 
 
-    <title>Lilian Yang Portfolio</title>
+
+    </style>
 </head>
 <body>
-<aside class="loader" id="loader">
-</aside>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-            </li>
 
+    <header>
+        <!--logo-->
+        <img src="img/mono-logo2.png" alt="" class="logo">
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<section class="home-hero parallax--bg">
+
+    <div class="container">
+        <div class="col-3">
+            <h1 class="title">The web is my
+            <span>
+              <ul class="fly-in-text hidden">
+                <li>p</li>
+                  <li>l</li>
+                  <li>a</li>
+                  <li>y</li>
+                  <li>g</li>
+                  <li>r</li>
+                  <li>o</li>
+                  <li>u</li>
+                  <li>n</li>
+                  <li>d</li>
+                  <!--<li>.</li>-->
+                  <!--<li>.</li>-->
+                  <!--<li>.</li>-->
+
+            </ul></span>
+            </h1>
+
+
+
+            <a href="" class="button button-accent title-button">see my works</a>
+        </div>
+
+    <!--<div class="col-3 fly-in-cat hidden">-->
+
+        <div class="col-3" data-aos="fade-up-left" data-aos-offset="-400"
+             data-aos-duration="2000" data-aos-easing="ease-in-sine">
+        <img src="img/cat-gif.gif" alt="" id="cat-gif">
+    </div>
+    </div>
+</section>
+
+<div class="container">
+    <section class="home-about">
+
+        <div class="home-about-textbox parallax--box" data-aos="slide-right" data-aos-duration="4000">
+            <h1>In the Box</h1>
+            <p> Hi! I'm Lilian Yang, I am Programming Analyst Student of George Brown College and I like cats.
+                I just recently got into playing with css and animations but I'm actually aiming to be an app/software developer.
+            </p>
+
+            <p>Anywaaay~ If you have questions for me pls do drop a message.
+
+                <strong>Enjoy browsing in my profile!</strong></p>
+
+        </div>
+
+    </section>
+</div>
+
+<section class="portfolio">
+    <div class="container">
+    <h1 style="color: #383838">Some of my works</h1>
+
+    <!--portfolio 01-->
+    <figure class="port-item" data-aos="flip-left" data-aos-duration="300">
+        <img src="img/portfolio-01l.jpg" alt="portfolio item">
+        <figcaption class="port-desc">
+            <p>Project title</p>
+            <a href="" class="button button-accent button-small">See project details</a>
+        </figcaption>
+    </figure>
+
+    <!--portfolio 02-->
+    <figure class="port-item" data-aos="flip-left" data-aos-duration="300" data-aos-delay="150">
+        <img src="img/portfolio-02l.jpg" alt="portfolio item">
+        <figcaption class="port-desc">
+            <p>Project title</p>
+            <a href="" class="button button-accent button-small">See project details</a>
+        </figcaption>
+    </figure>
+
+    <!--portfolio 03-->
+    <figure class="port-item" data-aos="flip-left" data-aos-duration="300" data-aos-delay="300">
+        <img src="img/portfolio-03l.jpg" alt="portfolio item">
+        <figcaption class="port-desc">
+            <p>Project title</p>
+            <a href="" class="button button-accent button-small">See project details</a>
+        </figcaption>
+    </figure>
+
+    <!--portfolio 04-->
+    <figure class="port-item" data-aos="flip-left" data-aos-duration="300" data-aos-delay="350">
+        <img src="img/portfolio-04l.jpg" alt="portfolio item">
+        <figcaption class="port-desc">
+            <p>Project title</p>
+            <a href="" class="button button-accent button-small">See project details</a>
+        </figcaption>
+    </figure>
+
+    <!--portfolio 05-->
+    <figure class="port-item" data-aos="flip-left" data-aos-duration="300" data-aos-delay="600">
+        <img src="img/portfolio-05l.jpg" alt="portfolio item">
+        <figcaption class="port-desc">
+            <p>Project title</p>
+            <a href="" class="button button-accent button-small">See project details</a>
+        </figcaption>
+    </figure>
+
+    <!--portfolio 06-->
+    <figure class="port-item" data-aos="flip-left" data-aos-duration="300" data-aos-delay="650">
+        <img src="img/portfolio-06l.jpg" alt="portfolio item">
+        <figcaption class="port-desc">
+            <p>Project title</p>
+            <a href="" class="button button-dark button-small">See project details</a>
+        </figcaption>
+    </figure>
+    </div>
+</section>
+
+
+    <section class="cta">
+        <div class="container">
+
+            <h1 class="title title-cta">Thank you for visiting
+                <span>Interested in working with me?</span>
+            </h1>
+
+            <a href="" class="button button-dark">Contact me :)</a>
+        </div>
+    </section>
+
+
+<footer>
+ <div class="container">
+    <div class="col-3">
+    <p>
+       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, in?
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, nam?
+    </p>
+    </div>
+
+    <div class="col-1">
+    <ul class="unstyled-list">
+        <li><strong>Cols</strong></li>
+        <li>asda</li>
+        <li>asda</li>
+        <li>asdas</li>
+        <li>asdas</li>
+    </ul>
+    </div>
+
+    <div class="col-1">
+        <ul class="unstyled-list">
+            <li><strong>Cols</strong></li>
+            <li>asda</li>
+            <li>asda</li>
+            <li>asdas</li>
+            <li>asdas</li>
         </ul>
     </div>
-</nav>
 
-<div class="container-fluid px1">
-    <div class="row">
-        <div class="heading">
-            <h1 class="display-4 wow slideInLeft" data-wow-duration="2s" data-wow-delay="2s">Hi! I'm Lilian Yang</h1>
-        </div>
+    <div class="col-1">
+        <ul class="unstyled-list">
+            <li><strong>Cols</strong></li>
+            <li>asda</li>
+            <li>asda</li>
+            <li>asdas</li>
+            <li>asdas</li>
+        </ul>
     </div>
-</div>
-
-<div class="container-fluid">
-    <div class="row">
-        <section class="first-sec" id="firstSec">
-            <h1 class="wow bounce">Skills and Experience </h1>
-            <h3>...</h3>
-            <div class="two-col">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, animi cupiditate exercitationem
-                    facere inventore ipsa iste maiores minus natus, placeat quasi tempora ut velit.
-                    Eum inventore magni nulla recusandae ullam!
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, animi cupiditate exercitationem
-                    facere inventore ipsa iste maiores minus natus, placeat quasi tempora ut velit.
-                    Eum inventore magni nulla recusandae ullam!
-                </p>
-            </div>
-            <div class="two-col">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, animi cupiditate exercitationem
-                    facere inventore ipsa iste maiores minus natus, placeat quasi tempora ut velit.
-                    Eum inventore magni nulla recusandae ullam!
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, animi cupiditate exercitationem
-                    facere inventore ipsa iste maiores minus natus, placeat quasi tempora ut velit.
-                    Eum inventore magni nulla recusandae ullam!
-                </p>
-            </div>
-        </section>
-    </div>
-</div>
-
-<div class="px2">
-    <div class="heading-sm">
-
-    </div>
-</div>
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="dark">
-            <h2 class="wow bounce">Projects</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Asperiores aut corporis debitis eius esse ex odio quia rem repudiandae sit?
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Asperiores aut corporis debitis eius esse ex odio quia rem repudiandae sit?
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Asperiores aut corporis debitis eius esse ex odio quia rem repudiandae sit?
-            </p>
-        </div>
-    </div>
-
-</div>
-
-<div class="px3">
-
-</div>
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="dark">
-            <h3>Other Stuff</h3>
-            <div class="two-col">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Cumque dolorem esse eum facilis hic laboriosam nisi pariatur quaerat, quod sit.
-                </p>
-            </div>
-            <div class="two-col">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Fuga id laborum odit porro quasi quo sapiente velit voluptas. Eos, quasi?
-                </p>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-<div class="px4">
-
-</div>
+ </div>
+</footer>
 
 
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous">
+    </script>
+
+    <script>
+        $(function(){
+
+            setTimeout(function() {
+                $('.fly-in-text').removeClass('hidden');
+            },500);
+
+            // setTimeout(function() {
+            //     $('.fly-in-cat').removeClass('hidden');
+            // },750);
+        })();
+    </script>
+    <script src="js/parallax.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
