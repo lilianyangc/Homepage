@@ -202,8 +202,9 @@ transition: initial;
 
 header{
     position: absolute; /*makes the header on top of the background-image*/
-    left: 0; /*centers the header along with right: 0*/
-    right: 0;
+    top: 2em;
+    left: 3em; /*centers the header along with right: 0*/
+    right: 3em;
     margin: 1em;
 }
 
