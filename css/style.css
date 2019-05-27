@@ -26,8 +26,6 @@ img {
 
 }
 
-
-
 /*if theres a floating image you need to clearfix*/
 .clearfix::after, section::after, footer::after {
     content: '';
@@ -76,6 +74,9 @@ img {
     .col-1{
         width: 16.666666%;
 
+    }
+    .home-about {
+        background-size: cover;
     }
 
 }
@@ -202,9 +203,9 @@ transition: initial;
 
 header{
     position: absolute; /*makes the header on top of the background-image*/
-    top: 2em;
-    left: 3em; /*centers the header along with right: 0*/
-    right: 3em;
+    top: em;
+    left: 0; /*centers the header along with right: 0*/
+    right: 0;
     margin: 1em;
 }
 
@@ -235,12 +236,14 @@ nav a:hover, nav a:focus {
 
 @media (min-width: 60rem ){
     .logo {
-        float: left;
+        float: center;
+        padding: 2em;
     }
 
     nav {
-        float: right;
+        float: center;
     }
+    
 }
 
 /*home-hero
@@ -259,7 +262,11 @@ nav a:hover, nav a:focus {
 @media (min-width: 60rem){
     .home-hero {
         height: 100vh;
-        padding-top: 35vh;
+        padding-top: 30vh;
+        /* padding-top: 35vh; */
+    }
+    .home-about {
+        background-size: cover;
     }
 }
 
@@ -289,6 +296,7 @@ nav a:hover, nav a:focus {
 .home-about {
     background-image: url("../img/box4test.gif");
     background-repeat: no-repeat;
+    background-size: cover;
     padding-bottom: 30em;
 }
 
@@ -307,6 +315,10 @@ nav a:hover, nav a:focus {
         padding: 0 .325em;
 
     }
+
+    .home-about {
+        background-size: cover;
+    }
 }
 
 @media (min-width: 60rem){
@@ -317,6 +329,7 @@ nav a:hover, nav a:focus {
     .home-about {
         background-image: url("../img/box4test.gif");
         background-repeat: no-repeat;
+        background-size: cover;
         padding-bottom: 40em;
     }
 
