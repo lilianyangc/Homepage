@@ -49,6 +49,8 @@
         /*.fly-in-text.hidden li:nth-child(12) { transform: translateX(-300px) translateY(200px); }*/
         /*.fly-in-text.hidden li:nth-child(13) { transform: translateX(20px) translateY(-20px); }*/
 
+        * { color: darkslategrey; text-decoration: none;}
+
     </style>
 </head>
 <body>
@@ -56,8 +58,8 @@
 <div>
 <header>
     <!--logo-->
-    <img src="img/logo1.png" alt="" class="logo">
-    <nav>
+    <!-- <img src="img/logo1.png" alt="" class="logo"> -->
+    <nav id="nav">
         <ul>
             <li><a href="#in_the_box">About</a></li>
             <li><a href="">Projects</a></li>
@@ -73,19 +75,25 @@
 
     <div class="container">
         <div class="col-3">
-            <h1 class="title">Let's create something
+            <h1>
+                <a href="" class="typewrite" data-period="2000" 
+                data-type='[ "Hi, my name is Lilian.", "I am a Junior Fullstack Developer.", "I Love New Technologies.", "I Love to Build." ]'>
+                  <span class="wrap"></span>
+                </a>
+              </h1>
+            <!-- <h1 class="title">Hi! My name is Lilian and I'm a developer. -->
                 <span>
-                    <ul class="fly-in-text hidden">
-                        <li>a</li>
-                        <li>w</li>
-                        <li>e</li>
-                        <li>s</li>
-                        <li>o</li>
-                        <li>m</li>
-                        <li>e</li>
-                        <li>!</li>
-                        <!-- <li>n</li>
-                        <li>d</li> -->
+                    <ul class="fly-in-text hidden" style="position: center;display: inline;">
+                        <!-- <li>Hi! &nbsp;</li>
+                        <li>My  &nbsp;</li>
+                        <li>name  &nbsp;</li>
+                        <li>is  &nbsp;</li>
+                        <li>Lilian  &nbsp;</li>
+                        <li>and  &nbsp;</li>
+                        <li>I'm  &nbsp;</li>
+                        <li>a  &nbsp;</li>
+                        <li>developer.</li> -->
+                        <!-- <li>d</li> -->
                         <!--<li>.</li>-->
                         <!--<li>.</li>-->
                         <!--<li>.</li>-->
@@ -94,15 +102,15 @@
                 </span>
             </h1>
 
-            <a href="#my_works" class="button button-accent title-button">Projects</a>
+            <!-- <a href="#my_works" class="button button-accent title-button">Projects</a> -->
         </div>
 
     <!--<div class="col-3 fly-in-cat hidden">-->
 
-        <div class="col-3" data-aos="fade-up-left" data-aos-offset="-400"
-             data-aos-duration="2000" data-aos-easing="ease-in-sine">
-        <img src="img/cat-gif.gif" alt="" id="cat-gif">
-    </div>
+        <div class="col-6" data-aos="fade-down" data-aos-offset="-400" data-aos-duration="2000" data-aos-easing="ease-in-sine">
+        <!-- <img src="img/cat-gif.gif" alt="" id="cat-gif"> -->
+            <img src="img/pcmain_small.png" alt="" id="">
+        </div>
     </div>
 </section>
 
@@ -110,18 +118,12 @@
     <section class="home-about" id="in_the_box">
 
         <div class="home-about-textbox parallax--box" data-aos="slide-right" data-aos-duration="4000">
-            <h1>In the Box</h1>
-            <p> Hi! I'm Lilian Yang, I am Computer Programming Analyst Student of George Brown College.
-                I want to help businesses build their apps fit to their 
-                customer's needs.
-            </p>
-
-            <p>If you have questions for me pls do drop a message.
-
-                <strong>Enjoy browsing through my profile!</strong></p>
-
+            <h1>Profile</h1>
+        <p> Course:<br> Computer Programmer Analyst <br>
+                Likes:<br> Implementing new technologies <br>
+                Other Interests: <br>Web Security, DevOps <br>
+        </p>
         </div>
-
     </section>
 </div>
 
@@ -239,12 +241,12 @@
  </div>
 </footer>
 
-
     <script
             src="https://code.jquery.com/jquery-2.2.4.min.js"
             integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
             crossorigin="anonymous">
     </script>
+
 
     <script>
         $(function(){
@@ -256,7 +258,8 @@
             // setTimeout(function() {
             //     $('.fly-in-cat').removeClass('hidden');
             // },750);
-        })();
+        });
+        
     </script>
     <script src="js/parallax.js"></script>
 
