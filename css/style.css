@@ -441,3 +441,52 @@ footer {
     padding: 5em 0;
 }
 
+/* ------ */
+#pc{
+    position: relative;
+      top: 0;
+      left: 0;
+}
+
+#cog{
+    transition-delay: .5s;
+    position: absolute;
+    top: 7.8em;
+    /* animation: rotation 15s infinite linear; */
+}
+
+#window{
+    transition-delay: 10s;
+    position: absolute;
+    top: 7.5em;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+  #window {
+    -webkit-animation: mover 2s infinite  alternate;
+    animation: mover 2s infinite  alternate;
+    }
+
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+  /* --Mybutton effects-- */
+  .MyButton {
+    background: #00f;
+    color: #fff;
+ }
+ 
+ .MyButton:hover, .MyButton:focus {
+    background: #fff;
+    color: #00f;
+ }
