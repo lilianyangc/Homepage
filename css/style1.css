@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+    /* box sizing is based on the box size with the padding*/
+    transition: all ease-in-out 250ms;
+}
+
+body{
+    margin: 0; /*important*/
+    font-family:sans-serif;
+    text-align:center;
+}
+
+/*setting the max width of the images*/
+img {
+    max-width: 100%; /*important*/
+    height: auto; /*important*/
+}
+
+/*home-hero
+-----------------*/
+.container{
+    width: 95%; /*stops the text from going to the end of the screen*/
+    max-width: 70em;
+    margin: 0 auto; /*important*/
+    position: relative;
+
+}
+
+.home-hero {
+    background-image: url(../img/white-bg.png);
+    background-size: cover;
+    background-position: center;
+    padding: 5em 0;
+    color: #232323;
+    background-attachment: fixed;
+    /*opacity: .75;*/
+}
+
+@media (min-width: 60rem){
+    .home-hero {
+        height: 100vh;
+        padding-top: 10vh;
+        /* padding-top: 35vh; */
+    }
+    .home-about {
+        background-size: cover;
+    }
+}
+
+@media (min-width: 25rem){
+    h1{
+        font-size: 2rem;
+    }
+
+    .home-about-textbox {
+        /* margin: auto; */
+        /* height: 600px; */
+        padding: 5.5em;
+    }
+
+    .home-about-textbox h1{
+        top: .6em;
+        padding: 0 .325em;
+
+    }
+
+    .home-about {
+        background-size: cover;
+    }
+
+    #in_the_box{
+        height: 100px;
+    }
+
+    #my_works{
+        height: 240px;
+    }
+
+    #pc{
+        margin: auto;
+        max-width: 100%;
+        max-height: 100vh;
+        height: auto;
+    }
+
+    #pcImage{
+        max-width: 190%;
+    }
+    
+    #cog{
+        margin: auto;
+        top: -20em;
+        transition-delay: .5s;
+        max-width: 100%;
+        max-height: 100vh;
+        /* animation: rotation 15s infinite linear; */
+    }
+    
+    #window{
+        margin: auto;
+        height: 75px;
+        top: -30em;
+        transition-delay: 3s;
+        align-content: center;
+    }
+
+    #chevron {
+        margin: auto;
+        top: -15em;
+        transition-delay: 8s;
+        /* -webkit-animation: mover .5s infinite  alternate; */
+        animation: mover 1s infinite  alternate;
+        }
+}

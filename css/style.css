@@ -1,8 +1,12 @@
 /*mobile first development*/
+html {
+    scroll-behavior: smooth;
+}
+
 
 *{
     box-sizing: border-box;
-   /* box sizing is based on the box size with the padding*/
+    /* box sizing is based on the box size with the padding*/
     transition: all ease-in-out 250ms;
 }
 
@@ -79,6 +83,10 @@ img {
         background-size: cover;
     }
 
+    #window{
+        top:11em;
+    }
+
 }
 
 /* typography
@@ -113,9 +121,9 @@ p:last-of-type{
     margin: 0 0 .5em;
 }
 
-.title-cta button {
+/* .title-cta button {
 
-}
+} */
 
 .unstyled-list{
     margin: 0;
@@ -256,11 +264,11 @@ nav a:hover, nav a:focus {
     position: fixed;
     top: 0;
     width: 100%;
-  }
-  
-  .sticky + .content {
+}
+
+.sticky + .content {
     padding-top: 60px;
-  }
+}
 
 /*home-hero
 -----------------*/
@@ -268,7 +276,7 @@ nav a:hover, nav a:focus {
     background-image: url(../img/white-bg.png);
     background-size: cover;
     background-position: center;
-    padding: 10em 0;
+    padding: 5em 0;
     color: #232323;
     background-attachment: fixed;
     /*opacity: .75;*/
@@ -278,7 +286,7 @@ nav a:hover, nav a:focus {
 @media (min-width: 60rem){
     .home-hero {
         height: 100vh;
-        padding-top: 30vh;
+        padding-top: 10vh;
         /* padding-top: 35vh; */
     }
     .home-about {
@@ -314,7 +322,6 @@ nav a:hover, nav a:focus {
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 30em;
-    margin-top: 15em;
 }
 
 /*determined the style on the specified min-width*/
@@ -324,6 +331,8 @@ nav a:hover, nav a:focus {
     }
 
     .home-about-textbox {
+        /* margin: auto; */
+        /* height: 600px; */
         padding: 5.5em;
     }
 
@@ -336,6 +345,61 @@ nav a:hover, nav a:focus {
     .home-about {
         background-size: cover;
     }
+
+    #in_the_box{
+        height: 100px;
+    }
+
+    #pc{
+        margin: auto;
+        max-width: 100%;
+        max-height: 100vh;
+        height: auto;
+    }
+    
+    #cog{
+        /* margin: auto;
+        top: -20em;
+        transition-delay: .5s;
+        max-width: 100%;
+        max-height: 100vh; */
+        margin: auto;
+        transition-delay: .5s;
+        position: absolute;
+        top: 8.5em;
+        /* animation: rotation 15s infinite linear; */
+    }
+
+    /* #cog{
+        margin: auto;
+        transition-delay: .5s;
+        position: absolute;
+        top: 13em;
+    } */
+
+    
+    #window{
+        /* margin: auto;
+        height: 75px;
+        top: -30em;
+        transition-delay: 3s;
+        align-content: center; */
+        margin: auto;
+        transition-delay: .5s;
+        position: absolute;
+        top: 9em;
+        transition-delay: 3s;
+    }
+
+    #chevron {
+        margin: auto;
+        /* top: -15em; */
+        transition-delay: 8s;
+        /* -webkit-animation: mover .5s infinite  alternate; */
+        animation: mover 1s infinite  alternate;
+        }
+
+        
 }
 
 @media (min-width: 60rem){
@@ -364,6 +428,36 @@ nav a:hover, nav a:focus {
         top: .75em;
         left: 6rem;
         transform: translateX(0);
+    }
+
+    #in_the_box{
+        height: 100px;
+    }
+
+    #my_works{
+        height: 200px;
+    }
+
+    #pc{
+        margin: auto;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    
+    #cog{
+        margin: auto;
+        transition-delay: .5s;
+        position: absolute;
+        top: 13em;
+        /* animation: rotation 15s infinite linear; */
+    }
+    
+    #window{
+        margin: auto;
+        transition-delay: 3s;
+        position: absolute;
+        top: 7.5em;
     }
 
 }
@@ -421,6 +515,10 @@ nav a:hover, nav a:focus {
     .port-item:hover .port-desc {
         transform: translateY(0%);
     }
+
+    #window{
+        top: 12em;
+    }
 }
 
 /*CTA
@@ -442,24 +540,11 @@ footer {
 }
 
 /* ------ */
-#pc{
-    position: relative;
-      top: 0;
-      left: 0;
-}
 
-#cog{
-    transition-delay: .5s;
-    position: absolute;
-    top: 7.8em;
-    /* animation: rotation 15s infinite linear; */
-}
 
-#window{
-    transition-delay: 10s;
-    position: absolute;
-    top: 7.5em;
-}
+
+
+
 
 @keyframes rotation {
     from {
@@ -470,10 +555,12 @@ footer {
     }
   }
 
-  #window {
-    -webkit-animation: mover 2s infinite  alternate;
-    animation: mover 2s infinite  alternate;
-    }
+#window {
+-webkit-animation: mover 2s infinite  alternate;
+animation: mover 2s infinite  alternate;
+}
+
+
 
 @-webkit-keyframes mover {
     0% { transform: translateY(0); }
@@ -491,3 +578,8 @@ footer {
     color: #00f;
  }
 
+
+/* custom bootstrap */
+#nav-center{
+    margin: auto;
+}
